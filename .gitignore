@@ -1,0 +1,28 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+env/
+venv/
+
+# VSCode
+.vscode/
+
+# Docker
+*.log
+*.pid
+*.db
+*.sqlite3
+init.sql
+
+# Byte-compiled / cache
+*.py[cod]
+*$py.class
+
+# Others
+.idea/
+.DS_Store
