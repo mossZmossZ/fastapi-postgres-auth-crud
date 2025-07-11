@@ -24,6 +24,10 @@ def read_item(item_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Item not found")
     return item
 
+@router.get("/items/", response_model=list[ItemSchema])
+def list_items(db: Session = Depends(get_db)):
+    items = db.query(DBItem).all()
+    return items
 
 @router.get("/secure/items/{item_id}", response_model=ItemSchema)
 def read_item_secure(
